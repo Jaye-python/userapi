@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seed</title>
+</head>
+<body>
+   <p style="text-align:center">This page is just used to seed the DB with sample data</p>
+   <p style="text-align:center">
+    <form action="{% url 'seeddb' %}" method="POST" style="text-align:center">
+        <button type="submit">Seed the DB</button>
+    </form>
+   </p>
+
+   <p style="text-align:center">
+    {{ count }} users created on the DB
+    </p>
+
+   <p style="text-align:center">
+    <a href = "{% url 'users-list' %}"> Click here to go to API Homepage </a>
+    </p>
+   
+</body>
+</html>
