@@ -48,16 +48,13 @@ SPECTACULAR_SETTINGS = {
     'REDOC_DIST': 'SIDECAR',
 }
 
-CACHE_TTL = 60 * 15
+CACHE_TTL = 60 * 1 # One minute cache
 
 CACHES = {
     "default": {
         "BACKEND": 'django.core.cache.backends.redis.RedisCache',
         "LOCATION": 'redis://127.0.0.1:6379',
         "KEY_PREFIX": "users",
-        # "OPTIONS": {
-        #     "CLIENT_CLASS": "django_redis.client.DefaultClient",
-        # }
     }
 }
 
@@ -91,6 +88,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.cache.FetchFromCacheMiddleware',
 ]
+
+CSRF_COOKIE_SECURE = False
 
 ROOT_URLCONF = 'user_api_project.urls'
 
