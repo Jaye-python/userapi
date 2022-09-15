@@ -18,7 +18,16 @@ class ProductFilter(filters.FilterSet):
 # MODEL
 class UserViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows users to be viewed or edited.
+    API endpoint that allows users to be viewed, created, edited and deleted.
+    URL: http://127.0.0.1:8000/users/
+
+    You may filter using case INsenSITIve names:
+    Filter URL: http://127.0.0.1:8000/users/?first_name=jo
+    Filter URL: http://127.0.0.1:8000/users/?first_name=jo&last_name=pa
+    Docs URL: http://127.0.0.1:8000/api/schema/swagger-ui/
+    2nd Docs URL: http://127.0.0.1:8000/api/schema/redoc
+    YAML Docs URL: http://127.0.0.1:8000/api/schema/
+
     """
     queryset = Users.objects.all().order_by('-created')
     serializer_class = UserSerializer

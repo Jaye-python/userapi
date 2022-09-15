@@ -8,3 +8,8 @@ class Users(models.Model):
 
     def __str__(self) -> str:
         return self.first_name
+    
+    class Meta:
+       indexes = [
+            models.Index(fields=['first_name',]),
+]
