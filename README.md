@@ -8,8 +8,6 @@ This site is hosted on [pythonanywhere](https://olalekanj.pythonanywhere.com/use
 
 `URL to Edit, Delete, Update users:`  [(https://olalekanj.pythonanywhere.com/users/1)]
 
-`URL to seed the DB with 10,000 users at a time:`  [(https://olalekanj.pythonanywhere.com/seeddb/)]
-
 `Swagger Documentation:`  [(https://olalekanj.pythonanywhere.com/api/schema/swagger-ui/)]
 
 `Redocs Documentation:`  [(https://olalekanj.pythonanywhere.com/api/schema/redoc/)]
@@ -31,6 +29,3 @@ Each page returns 20 records per page
 ## Caching
 
 Caching is achieved using `Redis` with `Time To Live (TTL)` of 1 minute
-
-
-
